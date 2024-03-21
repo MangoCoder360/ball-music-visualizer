@@ -70,6 +70,9 @@ function renderFrame() {
 }
 
 function init() {
+    var text = document.getElementById('text');
+    text.parentNode.removeChild(text);
+
     var canvas = document.getElementById('canvas');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -105,6 +108,3 @@ async function initMidi(){
         }, note.time * 1000);
     });
 }
-
-
-setTimeout(init, 100);
